@@ -1,4 +1,4 @@
-cat > /etc/dnsmasq.conf << '__EOF__'
+cat >> /etc/dnsmasq.conf << '__EOF__'
 # Reverse DNS record for master
 host-record=$SERVER_MASTER_DOMAIN,$PRIMARY_INTERNAL_IP
 # Wildcard DNS for OpenShift Applications - Points to Router
