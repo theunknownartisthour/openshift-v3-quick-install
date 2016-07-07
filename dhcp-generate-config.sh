@@ -1,3 +1,3 @@
 cat >> /etc/dhcp/dhclient.conf << '__EOF__'
-prepend domain-name-servers 192.168.1.100;
+prepend domain-name-servers $PRIMARY_INTERNAL_IP;
 __EOF__
