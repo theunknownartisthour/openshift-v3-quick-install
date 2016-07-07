@@ -1,4 +1,22 @@
 # openshift-v3-quick-install
+
+# Add quick install
+```
+mkdir /opt/openshift-v3-quick-install
+chmod 755 /opt /opt/openshift-v3-quick-install
+cd /opt/openshift-v3-quick-install
+wget https://github.com/theunknownartisthour/openshift-v3-quick-install/archive/v0.1.0-alpha.1.tar.gz
+tar -zxvf v0.1.0-*.tar.gz --strip-components 1
+rm -f v0.1.0-*.tar.gz
+
+#add to path
+export OPENSHIFT_QUICK_INSTALL_DIR=/opt/openshift-v3-quick-install
+export PATH=/opt/openshift-v3-quick-install:$PATH
+
+#chmod the executables
+find $OPENSHIFT_QUICK_INSTALL_DIR -type f -exec chmod 755 {} \;
+```
+
 Order of Operations 
 ( for help look at http://sudhaker.com/10/install-the-latest-openshift-v3-on-centos-7-1 and https://developers.redhat.com/blog/2015/11/19/dns-your-openshift-v3-cluster/ )
 
