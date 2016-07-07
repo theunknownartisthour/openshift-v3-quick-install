@@ -1,0 +1,1 @@
+oadm policy add-cluster-role-to-user cluster-admin admin
