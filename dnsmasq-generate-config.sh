@@ -1,8 +1,8 @@
 cat > /etc/dnsmasq.conf << '__EOF__'
 # Reverse DNS record for master
-host-record=master.example.com,192.168.1.100
+host-record=$SERVER_MASTER_DOMAIN,$PRIMARY_INTERNAL_IP
 # Wildcard DNS for OpenShift Applications - Points to Router
-address=/apps.example.com/192.168.1.100
+address=/$SERVER_APPS_DOMAIN/$PRIMARY_INTERNAL_IP
 
 # Forward .local queries to SkyDNS
 server=/local/127.0.0.1#8053
